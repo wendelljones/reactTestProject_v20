@@ -7,7 +7,7 @@ import GoogleMapFor20 from './components/maps.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div>
+  <div className='appContainer'>
     <Header />
     <GoogleMapFor20 />
     <Footer />
