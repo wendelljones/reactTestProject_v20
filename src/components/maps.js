@@ -7,7 +7,7 @@ function GoogleMapFor20() {
 
     const locations = [
         { lat: 37.818330,  lng: -122.478500, name: "Golden Gate Bridge" },
-        { lat: 33.028561,  lng: -96.674291, name: "Location 2" },
+        { lat: 33.028561,  lng: -96.674291, name: "Dallas Texas" },
     ];
 
     return (
@@ -15,8 +15,8 @@ function GoogleMapFor20() {
         <LoadScript googleMapsApiKey="AIzaSyA_V4J1t09TrGyClkuYzvENZvJoba15i2c">
             <GoogleMap 
                 mapContainerStyle={{ width: '100%', height: '450px', margin: '0px', border: '2px solid #500000', borderRadius: '15px' }}
-                center={{ lat: 37.818330, lng: -122.478500 }}
-                zoom={9}
+                center={{ lat: 35.519119, lng: -108.739769 }}
+                zoom={5}
                 >
                     {locations.map((location, i) => (
                         <Marker
