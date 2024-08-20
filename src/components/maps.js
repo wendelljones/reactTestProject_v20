@@ -6,8 +6,19 @@ function GoogleMapFor20() {
     const [selected, setSelected] = useState(null);
 
     const locations = [
-        { lat: 37.818330,  lng: -122.478500, name: "Golden Gate Bridge" },
-        { lat: 33.028561,  lng: -96.674291, name: "Dallas Texas" },
+        { 
+            lat: 37.818330,  
+            lng: -122.478500, 
+            name: "Golden Gate Bridge",
+            description: "Famed 4,200 ft art deco suspension bridge open to car, bike & foot traffic.",
+            image: "./images/goldenGate_300x169.jpg" 
+        },
+        {   lat: 32.776665,  
+            lng: -96.796989, 
+            name: "Dallas Texas", 
+            description: "Dallas, a modern metropolis in north Texas, is a commercial and cultural hub of the region. Downtown’s Sixth Floor Museum at Dealey Plaza commemorates the site of President John F. Kennedy’s assassination in 1963. In the Arts District, the Dallas Museum of Art and the Crow Collection of Asian Art cover thousands of years of art. The sleek Nasher Sculpture Center showcases contemporary sculpture.",
+            image: "./images/dallasSkyline_300x185.jpg"
+        }
     ];
 
     return (
@@ -32,9 +43,9 @@ function GoogleMapFor20() {
                             onCloseClick={() => setSelected(null)}
                         >
                             <div className="locationCallout">
-                                <img className="calloutImg" src="./images/goldenGate_300x169.jpg" alt="Golden Gate Bridge" />
+                                <img className="calloutImg" src={selected.image} alt={selected.name} />
                                 <h4>{selected.name}</h4>
-                                <p>Famed 4,200 ft art deco suspension bridge open to car, bike & foot traffic.</p>
+                                <p>{selected.description}</p>
                             </div>
                         </InfoWindow>
                     )}
