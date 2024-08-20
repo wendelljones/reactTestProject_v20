@@ -8,8 +8,29 @@ h4 {
     color: #500000;
 }
 
-map {
-    border: 1px solid black;
+.mapDiv {
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.googleMap {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.locationCallout {
+    max-width: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+.calloutImg {
+    max-height: 120px;
+    text-align: left;
+}
+
+.gm-ui-hover-effect {
+    width: 10px;
+    height: 10px;
 }

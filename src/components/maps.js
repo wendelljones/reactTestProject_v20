@@ -6,15 +6,15 @@ function GoogleMapFor20() {
     const [selected, setSelected] = useState(null);
 
     const locations = [
-        { lat: 37.818330,  lng: -122.478500, name: "Location 1" },
+        { lat: 37.818330,  lng: -122.478500, name: "Golden Gate Bridge" },
         { lat: 33.028561,  lng: -96.674291, name: "Location 2" },
     ];
 
     return (
-        <div className="map">
+        <div className="mapDiv">
         <LoadScript googleMapsApiKey="AIzaSyA_V4J1t09TrGyClkuYzvENZvJoba15i2c">
-            <GoogleMap
-                mapContainerStyle={{ width: '75%', height: '450px', margin: '20px', border: '2px solid #500000', borderRadius: '15px' }}
+            <GoogleMap 
+                mapContainerStyle={{ width: '100%', height: '450px', margin: '0px', border: '2px solid #500000', borderRadius: '15px' }}
                 center={{ lat: 37.818330, lng: -122.478500 }}
                 zoom={9}
                 >
@@ -31,9 +31,10 @@ function GoogleMapFor20() {
                             position={{ lat: selected.lat, lng: selected.lng }}
                             onCloseClick={() => setSelected(null)}
                         >
-                            <div>
+                            <div className="locationCallout">
+                                <img className="calloutImg" src="./images/goldenGate_300x169.jpg" alt="Golden Gate Bridge" />
                                 <h4>{selected.name}</h4>
-                                <p>Details about this location.</p>
+                                <p>Famed 4,200 ft art deco suspension bridge open to car, bike & foot traffic.</p>
                             </div>
                         </InfoWindow>
                     )}
