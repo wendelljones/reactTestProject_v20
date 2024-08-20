@@ -26,12 +26,32 @@ h4 {
     padding: 0;
 }
 
+.locationCallout > button {
+    background: none;
+    background-color: #FFFFFF;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #500000;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
 .calloutImg {
     max-height: 120px;
     text-align: left;
-}
+    }
 
-.gm-ui-hover-effect {
-    width: 10px;
-    height: 10px;
+.buttonStyle {
+    background: none;
+    background-color: #FFFFFF;
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }

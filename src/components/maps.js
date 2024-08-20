@@ -43,6 +43,11 @@ function GoogleMapFor20() {
                             onCloseClick={() => setSelected(null)}
                         >
                             <div className="locationCallout">
+                                <button className="buttonStyle"
+                                    onClick={() => setSelected(null)}
+                                    >
+                                        X
+                                    </button>
                                 <img className="calloutImg" src={selected.image} alt={selected.name} />
                                 <h4>{selected.name}</h4>
                                 <p>{selected.description}</p>
